@@ -2,21 +2,20 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
   extends: [
     "eslint:recommended",
     "plugin:vue/vue3-essential",
     "plugin:@typescript-eslint/recommended",
     "@vue/prettier",
-    "./.eslintrc-auto-import.json",
   ],
   overrides: [],
   parser: "vue-eslint-parser",
   parserOptions: {
     parser: "@typescript-eslint/parser",
     ecmaVersion: "latest",
-    sourceType: "module",
+    sourceType: "module"
   },
   plugins: ["vue", "@typescript-eslint"],
   rules: {
@@ -30,8 +29,8 @@ module.exports = {
         tabWidth: 2,
         trailingComma: "none",
         useTabs: false,
-        endOfLine: "auto",
-      },
-    ],
-  },
-};
+        endOfLine: "auto"
+      }
+    ]
+  }
+}

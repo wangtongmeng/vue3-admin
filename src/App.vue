@@ -7,5 +7,5 @@
   <Counter></Counter>
 </template>
 <script setup lang="ts">
-import Counter from '@/components/Counter/index.vue'
+import Counter from "@/components/Counter/index.vue"
 </script>

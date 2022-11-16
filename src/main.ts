@@ -1,23 +1,17 @@
-import { createPinia } from "pinia"
 import { createApp } from "vue"
 import App from "./App.vue"
 import router from "./router/index"
-import ElementPlus from "element-plus" // 这里我们直接全量引入
-import "element-plus/dist/index.css"
-// 初始化css，重置css默认样式
+import { createPinia } from "pinia"
 import "normalize.css/normalize.css"
-// 全局css
 import "@/styles/index.scss"
-
-// 引入icon插件
 import initSvgIcon from "@/icons/index"
 import "virtual:svg-icons-register"
-
+// 注册element-plus
+import installElementPlus from "./plugins/element"
 const app = createApp(App)
-
 app.use(createPinia())
+// 安装element-plus插件
+app.use(installElementPlus)
 app.use(router)
-app.use(ElementPlus)
-// 使用icon组件
 app.use(initSvgIcon)
 app.mount("#app")

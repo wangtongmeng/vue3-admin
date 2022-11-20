@@ -9,8 +9,7 @@
         <div class="tags-view">tagsview</div>
       </div>
       <div class="app-main">
-        <h2>app main</h2>
-        <router-view></router-view>
+        <app-main></app-main>
       </div>
     </div>
   </div>

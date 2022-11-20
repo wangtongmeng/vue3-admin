@@ -11,11 +11,12 @@ declare module '@vue/runtime-core' {
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Sidebar: typeof import('./components/Sidebar/index.vue')['default']
-    SidebarItem: typeof import('./components/Sidebar/SidebarItem.vue')['default']
+    Sidebar: typeof import('./layout/components/Sidebar/index.vue')['default']
+    SidebarItem: typeof import('./layout/components/Sidebar/SidebarItem.vue')['default']
     SvgIcon: typeof import('./components/SvgIcon/index.vue')['default']
   }
 }

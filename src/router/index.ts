@@ -73,6 +73,21 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
         }
       }
     ]
+  },
+  {
+    // 外链路由
+    path: "/external-link",
+    component: Layout,
+    children: [
+      {
+        path: "http://www.zhufengpeixun.com/",
+        redirect: "/",
+        meta: {
+          title: "External Link",
+          icon: "link"
+        }
+      }
+    ]
   }
 ]
 

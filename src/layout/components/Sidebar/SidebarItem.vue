@@ -3,17 +3,19 @@
     <!-- 如果有一个孩子，或者没孩子，或者有一个孩子但是被hidden了 -->
     <template v-if="theOnlyOneChildRoute">
       <!-- 如果没有meta属性意味着不必渲染了 -->
-      <el-menu-item
-        :index="resolvePath(theOnlyOneChildRoute.path)"
+      <sidebar-item-link
+        :to="resolvePath(theOnlyOneChildRoute.path)"
         v-if="theOnlyOneChildRoute.meta"
       >
-        <el-icon v-if="icon">
-          <svg-icon class="menu-icon" :icon-class="icon"></svg-icon>
-        </el-icon>
-        <template #title>
-          <span>{{ theOnlyOneChildRoute.meta?.title }}</span>
-        </template>
-      </el-menu-item>
+        <el-menu-item :index="resolvePath(theOnlyOneChildRoute.path)">
+          <el-icon v-if="icon">
+            <svg-icon class="menu-icon" :icon-class="icon"></svg-icon>
+          </el-icon>
+          <template #title>
+            <span>{{ theOnlyOneChildRoute.meta?.title }}</span>
+          </template>
+        </el-menu-item>
+      </sidebar-item-link>
     </template>
     <!-- 多个子路由时 -->
     <el-sub-menu v-else :index="resolvePath(item.path)" popper-append-to-body>
@@ -39,6 +41,7 @@
 import type { PropType } from "vue"
 import type { RouteRecordRaw } from "vue-router"
 import path from "path-browserify"
+import { isExternal } from "@/utils/validate"
 const props = defineProps({
   item: {
     type: Object as PropType<RouteRecordRaw>,
@@ -102,6 +105,9 @@ const icon = computed(() => {
 // 利用path.resolve 根据父路径+子路径 解析成正确路径 子路径可能是相对的
 // resolvePath在模板中使用
 const resolvePath = (childPath: string) => {
+  if (isExternal(childPath)) {
+    return childPath
+  }
   return path.resolve(props.basePath, childPath)
 }
 </script>

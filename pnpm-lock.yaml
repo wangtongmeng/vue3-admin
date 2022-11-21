@@ -15,6 +15,7 @@ specifiers:
   husky: ^8.0.2
   normalize.css: ^8.0.1
   pinia: ^2.0.23
+  pinia-plugin-persistedstate: ^2.4.0
   prettier: ^2.7.1
   sass: ^1.56.1
   svgo: ^3.0.1
@@ -32,6 +33,7 @@ dependencies:
   element-plus: 2.2.21_vue@3.2.45
   normalize.css: 8.0.1
   pinia: 2.0.23_mgnvym7yiazkylwwogi5r767ue
+  pinia-plugin-persistedstate: 2.4.0_pinia@2.0.23
   unplugin-element-plus: 0.4.1_vite@3.2.4
   vue: 3.2.45
   vue-router: 4.1.6_vue@3.2.45
@@ -3045,6 +3047,17 @@ packages:
   /picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  /pinia-plugin-persistedstate/2.4.0_pinia@2.0.23:
+    resolution: {integrity: sha512-bQcpv47jk3ISl+InuJWsFaS/K7pRZ97kfoD2WCf/suhnlLy48k3BnFM2tI6YZ1xMsDaPv4yOsaPuPAUuSmEO2Q==}
+    peerDependencies:
+      pinia: ^2.0.0
+    peerDependenciesMeta:
+      pinia:
+        optional: true
+    dependencies:
+      pinia: 2.0.23_mgnvym7yiazkylwwogi5r767ue
+    dev: false
 
   /pinia/2.0.23_mgnvym7yiazkylwwogi5r767ue:
     resolution: {integrity: sha512-N15hFf4o5STrxpNrib1IEb1GOArvPYf1zPvQVRGOO1G1d74Ak0J0lVyalX/SmrzdT4Q0nlEFjbURsmBmIGUR5Q==}

@@ -7,7 +7,7 @@
     :background-color="scssVariables.menuBg"
     :text-color="scssVariables.menuText"
     :active-text-color="scssVariables.menuActiveText"
-    :collapse="isCollapse"
+    :collapse="sidebar.opened"
     :collapse-transition="true"
   >
     <!-- 循环sidebar-item组件 -->
@@ -23,6 +23,10 @@
 import scssVariables from "@/styles/variables.module.scss"
 // 导入路由表
 import { routes } from "@/router"
+import { useAppStore } from "@/stores/app"
+import { storeToRefs } from "pinia"
+const store = useAppStore()
+const { sidebar } = storeToRefs(store)
 // 渲染路由
 const menuRoutes = computed(() => routes)
 const route = useRoute()

@@ -26,16 +26,12 @@
     flex-direction: column;
 
     .header {
-      background: cyan;
-
       .navbar {
         height: 50px;
-        background: #1890ff;
       }
 
       .tags-view {
         height: 34px;
-        background: #12efff;
       }
     }
 

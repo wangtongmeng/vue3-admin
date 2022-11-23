@@ -5,6 +5,7 @@ import { ElMessage, ElNotification, ElMessageBox } from "element-plus"
 // import "element-plus/theme-chalk/el-message.css"
 // import "element-plus/theme-chalk/el-notification.css"
 // import "element-plus/theme-chalk/el-message-box.css"
+export type Size = "default" | "large" | "small"
 export default (app: App): void => {
   // 按需导入组件列表
   // Vue.prototype 替换为 config.globalProperties

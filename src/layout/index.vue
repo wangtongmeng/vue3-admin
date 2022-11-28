@@ -6,7 +6,7 @@
     <div class="main-container">
       <div class="header">
         <navbar></navbar>
-        <div class="tags-view">tagsview</div>
+        <tags-view></tags-view>
       </div>
       <div class="app-main">
         <app-main></app-main>

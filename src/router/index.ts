@@ -110,7 +110,8 @@ const constantRoutes: Array<RouteRecordRaw> = [
           ),
         meta: {
           title: "Dashboard",
-          icon: "dashboard"
+          icon: "dashboard",
+          affix: true
         }
       }
     ]

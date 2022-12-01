@@ -33,5 +33,8 @@ module.exports = {
         endOfLine: "auto"
       }
     ]
+  },
+  globals: {
+    defineOptions: "readonly"
   }
 }
